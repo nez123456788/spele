@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mana spēle</title>
+<style>
+/* Pamata izkārtojums — šīs rindas nemaini */
+body { font-family: Arial, sans-serif; max-width: 680px; margin: 24px auto; padding: 16px; line-height: 1.6; }
+button, input { font: inherit; padding: 10px 16px; margin: 6px 0; cursor: pointer; }
+img, audio { max-width: 100%; }
+[hidden] { display: none !important; }
+
+/* NOFORMĒ ŠEIT: pielieto 2.1. un 2.2. nodarbībā apgūto CSS */
+body {
+  background-color: #e71010;
+  color: #8ab80e;
+}
+
+h1 {
+  color: #912222;
+  font-size: 36px;
+  text-align: center;
+}
+
+
+.noteikumi {
+  background-color: #000911;
+  color: #62c245;
+  padding: 36px;
+}
+
+.laukums {
+  width: 360px;
+  padding: 20px;
+  border-radius: 12px solid #000000;
+  background-color: #a12a2a;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+}
+
+button {
+  background-color: #1ec447;
+  color: #db2fbf;
+  border: 8px solid #000000;
+}
+</style>
+</head>
+<body>
+<h1>Spēles nosaukums</h1>
+<p>Īss spēles mērķa apraksts spēlētājam.</p>
+<section class="noteikumi">
+  <h2>Noteikumi</h2>
+  <p>Apraksti, kā spēlētājs šajā lapā iegūst punktus un noklausās skaņu.</p>
+</section>
+<img src="atels/džanis.png" alt="Liels gymbro" width="128">
+  <h2>Spēles laukums</h2>
+  <p>Skaņas efekta nozīme spēlē:</p>
+  <audio controls src="skanas/klikskis (2).wav"></audio>
+  <p id="punkti">Punkti: 0</p>
+  <button onclick="savakt()">Savākt punktu</button>
+</div>
+<script>
+// Gatava punktu poga — šo skriptu nemaini.
+let punkti = 0;
+function savakt() {
+  punkti = punkti + 1;
+  document.getElementById("punkti").textContent = "Punkti: " + punkti;
+}
+</script>
+</body>
+</html>
